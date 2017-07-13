@@ -29,7 +29,7 @@ These instructions replicate this layer with the more recent TIGER 2016 release.
    mkdir -p ./expanded
    find ./featnames -name '*.zip' -print | \
       xargs -t -L1 -P 24 -I {} /bin/sh -c 'export f={}; unzip -q $f -d ./expanded/$(basename $f _featnames.zip)'
-   find /mnt/tiger/roads -name '*.zip' -print | \
+   find ./roads -name '*.zip' -print | \
       xargs -t -L1 -P 24 -I {} /bin/sh -c 'export f={}; unzip -q $f -d ./expanded/$(basename $f _roads.zip)'
    ```
 
